@@ -1,0 +1,70 @@
+html,
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}   
+.header{
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.header > img{
+    max-height: 145px;
+}
+h1{
+    font-size: 38px;
+}
+.header > p{
+    margin-left: auto;
+    font-size: 22px;
+    font-weight: 500;
+}
+.header > button{
+    margin: 0 16px;
+    padding: 13px 21px;
+    border-radius: 360px;
+    border: black solid 1px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+}
+.header > button:hover{
+    color: black;
+    background-color: white;
+}
+.header > button:active{
+    position: relative;
+    top: 2px;
+}
+.body{
+    height: 85%;
+    background-image: url(../pexels-rafael-cosquiere-2041540.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+}
+/* .body > img{
+   
+    width: 100%;
+    opacity: 0.90;
+    z-index: -1;
+} */
+h3{
+    /* position: absolute;
+    top: 20px;
+    left: 20vw; */
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+button{
+    
+}
