@@ -4,6 +4,7 @@ body{
     margin: 0;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
 }
 body{
     display: flex;
@@ -47,7 +48,7 @@ h1{
 }
 .body{
     height: 85%;
-    background-image: url(../pexels-rafael-cosquiere-2041540.jpg);
+    background-image: url(../objects/pexels-rafael-cosquiere-2041540.jpg);
     background-size: cover;
     background-repeat: no-repeat ;
 }
@@ -67,4 +68,19 @@ h3{
 }
 button{
     
+}
+.card{
+    background-color: white;
+    min-width: 100px;
+    height: fit-content;
+    padding: 26px 20px;
+    border-radius: 15px;
+    font-weight: 500;
+}
+.cards{
+    padding: 15px;
+    min-height:78%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
