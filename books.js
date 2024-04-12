@@ -14,6 +14,10 @@ Book.prototype.info = function(){
             this.read
     );
     }
+Book.prototype.toggle = function(){
+    return((this.read == "read") ? "not read" : "read")
+};
+
     const cards = document.querySelector(".cards");
     
 function displayBooks(){
@@ -27,6 +31,11 @@ function displayBooks(){
     remove.textContent = "Remove";
     remove.setAttribute("data",`${i}`);
 
+    let toggle = document.createElement("button");
+    toggle.setAttribute("class","toggleBtn");
+    toggle.textContent = "Toggle";
+    toggle.setAttribute("data",`${i}`);
+
     
     
 
@@ -34,8 +43,9 @@ function displayBooks(){
     cardInfos.innerHTML = `Title: ${myLibrary[i].title} <br>
                             Author: ${myLibrary[i].author} <br>
                              Pages: ${myLibrary[i].pages}<br>
-                             reading state:${myLibrary[i].read}<br>`
+                             reading state: ${myLibrary[i].read}<br>`
     cardInfos.appendChild(remove);
+    cardInfos.appendChild(toggle);
     card.appendChild(cardInfos);
     cards.appendChild(card);
     
@@ -43,7 +53,11 @@ function displayBooks(){
         myLibrary.splice(Number(remove.getAttribute("data")), 1);
         displayBooks();
     });/* you can put on top it's fine*/
-   }
+    toggle.addEventListener("click", ()=>{
+        myLibrary[i].read = myLibrary[Number(toggle.getAttribute("data"))].toggle();
+        displayBooks();
+    });
+  } 
 }
 
 const button = document.querySelector(".addBook");
