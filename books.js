@@ -22,16 +22,27 @@ function displayBooks(){
     const card = document.createElement("div");
     card.setAttribute("class","card");
     
-    const remove = document.createElement("button");
+    let remove = document.createElement("button");
+    remove.setAttribute("class","removeBtn");
+    remove.textContent = "Remove";
+    remove.setAttribute("data",`${i}`);
+
+    
+    
 
     const cardInfos = document.createElement("div");
     cardInfos.innerHTML = `Title: ${myLibrary[i].title} <br>
                             Author: ${myLibrary[i].author} <br>
                              Pages: ${myLibrary[i].pages}<br>
-                             reading state:${myLibrary[i].read}`
+                             reading state:${myLibrary[i].read}<br>`
     cardInfos.appendChild(remove);
     card.appendChild(cardInfos);
     cards.appendChild(card);
+    
+    remove.addEventListener("click", ()=>{
+        myLibrary.splice(Number(remove.getAttribute("data")), 1);
+        displayBooks();
+    });/* you can put on top it's fine*/
    }
 }
 
@@ -59,7 +70,6 @@ function addBookTOLibrary(){
 
 button.addEventListener("click", ()=>{
     dialog.showModal();
-    cards.removeChild(card);
 })
 
 confirmButton.addEventListener("click", (event)=>{

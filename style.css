@@ -58,7 +58,7 @@ h3{
 .card{
     background-color: beige;
     min-width: fit-content;
-    height: 100px;
+    height: 110px;
     padding: 26px 20px;
     border-radius: 15px;
     font-weight: 500;
@@ -121,4 +121,15 @@ form input{
 ::backdrop{
     opacity: 0.8;
     background-color: rgba(0, 0, 0, 0.527);
+}
+.removeBtn{
+    border: black solid 1px;
+    color: white;
+    background-color: black;
+    padding: 6px 13px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 8px;
+    
 }
